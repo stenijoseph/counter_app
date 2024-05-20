@@ -32,8 +32,8 @@ const reset=()=>{
   console.log(count);
 }
   return (
-    <div className="">
-    <div className="ml-20 mt-3">
+    <div className="flex flex-col justify-center items-center w-full min-h-screen">
+    <div className="mt-3">
     <span className="rounded-full text-white bg-red-600 px-2">{count}</span>
     </div>
 <div className="flex gap-2 mt-3 ml-2 ">
