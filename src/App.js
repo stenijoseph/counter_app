@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
 
 function App() {
+  const[count,setCount]=useState(0)
+const increment=()=>{
+
+  // setCount(count+1)
+  // console.log(count);
+  if(count<10)
+    {
+      setCount(count+1)
+    }
+    else{
+      setCount(count)
+    }
+}
+const decrement=()=>{
+
+  // setCount(count-1)
+  // console.log(count);
+  if(count>1)
+    {
+      setCount(count-1)
+    }
+    else{
+      setCount(count)
+    } 
+}
+const reset=()=>{
+  setCount(0)
+  console.log(count);
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+    <div className="ml-20 mt-3">
+    <span className="rounded-full text-white bg-red-600 px-2">{count}</span>
+    </div>
+<div className="flex gap-2 mt-3 ml-2 ">
+        <button className="text-white bg-blue-800 px-4 py-2 rounded-xl" onClick={increment}>+</button>
+        <button className="text-white bg-blue-800 px-5 py-2 rounded-xl" onClick={reset}>reset</button>
+        <button className="text-white bg-blue-800 px-4 py-2  rounded-xl" onClick={decrement}>-</button>
+        </div>
     </div>
   );
 }
