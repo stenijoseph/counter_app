@@ -5,15 +5,15 @@ function App() {
   const[count,setCount]=useState(0)
 const increment=()=>{
 
-  // setCount(count+1)
-  // console.log(count);
-  if(count<10)
-    {
-      setCount(count+1)
-    }
-    else{
-      setCount(count)
-    }
+  setCount(count+1)
+  console.log(count);
+  // if(count<10)
+  //   {
+  //     setCount(count+1)
+  //   }
+  //   else{
+  //     setCount(count)
+  //   }
 }
 const decrement=()=>{
 
